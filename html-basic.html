@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-
     <h1>lorem</h1>
-    <h2>LOrem,ipsum</h2>
-    <h3>LOre,ipsum dolor.</h3>
-    <p>Loewm ipsum dolor sit amet consectetur adipisicing elit. Quo, sint aut.Blamditiis eveniet labore quis tempore rem facilis, veritatis laborinosam aliquid quasi corporis quam nobis pariatur ab fugiat.Harum,architecto. </p>
+    <h2>Lorem,ipsum</h2>
+    <h3>Lorem,ipsum dolor.</h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, sint aut.Blamditiis eveniet labore quis tempore rem facilis, veritatis laborinosam aliquid quasi corporis quam nobis pariatur ab fugiat.Harum,architecto. </p>
+
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Deserunt fuga maxime vel quam itaque facilis dolor molestiae tempora culpa,omnis reiciendis ut aliquid eius sunt excepturi quod delectus laudantium.Voluptates.</p>
+
     <a target=_blank href="https://WWW.jd.com/">在新窗口打开京东</a>
-    <a target=_blank herf="mailto:222@qq.com" >点我发邮件</a>
-    < href="#page-bottm">调到页面底部
-    <a href="../FOO.js">D点我下载文件</a>
+    <a target=_blank href="mailto:222@qq.com" >点我发邮件</a>
+    <a href="#page-bottom">跳到页面底部</a>
+    <a href="../F00.js">点我下载文件</a>
 
     <br>
 
-    <img width="200" height="200" src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b">alt="图片描述"
+    <img width="200" height="200" src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" alt="图片描述"
     
     <hr>
     <hr>
@@ -30,7 +31,7 @@
     <b>有什么</b>
     <strong>区别呢？</strong>
     <u>这个呢？</u>
-    <i>这个呢</i>
+    <i>这个呢？</i>
     <br>
     &lt;!-- 这段注释需要出现在页面里面 -->
 
@@ -51,14 +52,16 @@
 
     <ul>
         <li>
-            小学
-            <ol>
+          小学
+          <ol>
+            <li>一年级
+              <ol>
                 <li>上学期</li>
                 <li>下学期</li>
             </ol>
-        </li>
-        <li>二年级</li>
-        <li>三年级</li>
+          </li>
+          <li>二年级</li>
+          <li>三年级</li>
         </ol>
        </li>
        <li>中学</li>
@@ -83,7 +86,7 @@
 
     <hr>
 
-    <h3>Goole 搜索</h3>
+    <h3>Goole搜索</h3>
     <form tareget="_blank" action="https://www.google.com.hk/search"></form>
       <input type="text" required name="q">
       <input type="hidden" name="ie" value="UTF-8">
@@ -99,7 +102,7 @@
             <dt>性别</dt>
             <dd>
                 <label input type="radio" name="gender" value="male">男</label>
-                <label input type="radio" name="gender" value="female">男</label>
+                <label input type="radio" name="gender" value="female">女</label>
             </dd>
             <dt>年龄</dt>
             <dd>
@@ -110,19 +113,20 @@
                       <option value="6-12">6到12岁</option>
                     </optgroup>
                     <optgroup label="青年">
-                    <optgroup label="青年">
                       <option value="1-6">13到15岁</option>
-                      <option value="1-6">16到18岁</option>
+                      <option value="6-12">16到18岁</option>
                     <optgroup label="壮年">
                       <option value="1-6">1到6岁</option>
-                      <option value="1-6">6到12岁</option></optgroup>
+                      <option value="6-12">6到12岁</option></optgroup>
                    </select>
                 </dd>
                 <dt>生日</dt>
                 <dd>
                   <input type="date"name="birthday">
                 </dd>
-                <dd> <input type="time" name="birthtime">
+                <dd>生辰</dd>
+                <dd> 
+                  <input type="time" name="birthtime">
                 </dd>
                 <dt>照片</dt>
                 <dd>
@@ -136,18 +140,78 @@
                     <textarea name="intro" id="" cols="30" rows="10"></textarea>
                 </dd>
             </dl>>
-截至这里
+            
+            <fieldset disabled>
+              <legend>在这里面的全都禁用</legend>
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+            </fieldset>
 
-                 
-                  
-                    
+            <button>提交</button>
+            <button type="reset">重置</button>
+          </form>>
+            
+          <hr> 
+
+          <table border="1">
+            <col>
+            <col bgcolor=red>
+            </tbody>
+              <tr>
+                <th>编号</th>
+                <th>品名</th>
+                <th>进价</th>
+                <th>出价</th>
+              </tr>
+             <tr>
+               <th>aaa</th>
+               <td>aaa</td>
+               <td rowspan="2">5</td>
+               <td>aaa</td>
+             </tr>
+             <tr<th>aaa</th>
+             <td>aaa</td>
+             <td>aaa</td>
+             <td>8</td>
+            </tr>
+            <tr>
+              <th>aaa</th>
+              <td>aaa</td>
+              <td>aaa</td>
+              <td>aaa</td>
+            </tr>
+            <tr><th>aaa</th>
+              <td>aaa</td>
+              <td>aaa</td>
+              <td>aaa</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <hr>
+
+        <img width="300" usemap="#mapl" src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="">
+        <map name="mapl">
+           <area shape="rect" coords="55 110 210 200" href="#" alt="caffee">
+           <area shape="cicle" coords="135 260 90" href="#" alt="keke">
+        </map>
+        
+        <hr>
+        <a target="framel" href="https://www.mi.com/">小米</a>
+        <div></div>
+        <iframe name=framel src="https://nodejs.org" farmeborder="1"></iframe>>
+         
+        <p>aaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</p>
+        <pre>aaa       bbbb</pre>
+       >>>>>>>>>>>>>>><<<<<<<
+      &lt;span>&lt;/span>
+      
+        <div id="page-bottom"></div>
+      </body>
+      </html>
 
 
 
 
-
-
-            </dd>
-        </dl>
-        </p>
-    </form>
