@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            border-bottom: 2px solid #212529;
+        }
+
+        tr {
+            border-bottom：1px solid red;
+        }
+
+        td,
+        th {
+            padding: .5em;
+            text-align: left;
+        }
+
+        &table-striped {
+            tbody tr:nth-chlid(odd) {
+                background-color: #f2f2f2;
+            }
+        }
+
+        &table-hover {
+            tbody tr：hover {
+                background-color: #ECECEC;
+            }
+        }
+
+        &table-bordered {
+
+            td,
+            th {
+                border: 1px solid #DEE2E6;
+            }
+        }
+
+        &.table-borderless {
+
+            thead,
+            tr {
+                border: none;
+            }
+        }
+
+        &.table-sm {
+
+            th,
+            td {
+                padding: .25em;
+            }
+        }
+
+        &.table-dark {
+            background-color: #212529;
+            color: white;
+
+            thead {
+                border-bottom-color: white;
+            }
+
+            tr {
+                border-bottom-color: #373B3E;
+            }
+
+            &.table-striped {
+                tbody tr:nth-child(odd) {
+                    background-color: #2C3034;
+                }
+            }
+
+            &.table-hover {
+                tbody tr:hover {
+                    background-color: #323539;
+                }
+            }
+
+            &.table-bordered {
+
+                td,
+                th {
+                    border-color: #373B3E;
+                }
+            }
+        }
+        }
+
+        .table-responsive {
+            display: block;
+            overflow-x: auto;
+
+            tbody,
+            thead,
+            tfoot {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="" table-responsive table xtable-striped table-hover xtable-sm xtable-bordered table-borderless
+        xtable-dark>
+        <thead>
+            <tr>
+                <th scope="row">年</th>
+                <th scope="row">月</th>
+                <th scope="row">日</th>
+                <th scope="row">时</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>21</td>
+                <td>20</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>12</td>
+                <td>11</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>11</td>
+                <td>10</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
