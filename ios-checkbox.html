@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        label {
+            /*box-sizing 属性以特定的方式定义匹配某个区域的特定元素 假如要并排放置两个带边框的框，可通过将 box-sizing 设置为 "border-box"。 这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。 */
+            box-sizing: border-box;
+            width: 271px;
+            height: 156px;
+            /* display:inline-block不设置宽度时，内容撑开宽度；不会独占一行，支持宽高，代码换行被解析成空格，总而言之，inline-block包含了行内元素和块内元素的特点，即设置了inline-block属性的元素既拥有了block元素可以设置width和height的特性，又保持了inline元素不换行的特性。 */
+            display: inline-block;
+            border: 4px solid #c7c7c7;
+            /* border-radius 设置元素的外边框圆角 属性是一个简写属性，用于设置四个 border-*-radius 属性。 */
+            border-radius: 9999px;
+            position: relative;
+            /* 过渡可以为一个元素在不同状态之间切换的时候定义不同的过渡效果 */
+            transition: 0.3s;
+            padding: 7px;
+            /* box-shadow 向框添加一个或多个阴影。该属性是由逗号分隔的阴影列表  inset 将外部阴影 (outset) 改为内部阴影。*/
+            box-shadow: inset 0 0 0px white;
+            /* cursor 属性规定要显示的光标的类型(形状)  pointer	光标呈现为指示链接的指针（一只手）*/
+            cursor: pointer;
+
+        }
+
+        label::before {
+            transition: .3s padding-left .3s .05s;
+            box-shadow: 0 5px 15px #999;
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            content: '';
+            width: 134px;
+            padding-left: 0;
+            height: 134px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 99999px;
+        }
+        /* input:checked ~ label   ：相邻同胞选择器，选择被勾选的input标签后 所有的label标签 */
+        /* input:checked ＋ label   ：相邻同胞选择器，选择被勾选的input标签后 第一个label标签 */
+        input:checked + label::before {
+            left: 123px;
+            padding-left: 134px;
+            width: 0;
+            transition: .3s, width .3s .05s;
+
+        }
+
+        input:checked+label {
+            border-color: #03f34a;
+            box-shadow: inset 0 0 0px 75px #03f34a;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" hidden id="check1">
+    <label for="check1"></label>
+</body>
+
+</html>
