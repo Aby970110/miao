@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
 }
+/* 细节 注意列图上方的间距20px，使body margin与列图一致即可  */
 body {
     margin: 20px;
 }
@@ -14,19 +15,23 @@ header{
     background-color: red;
     min-width: 600px;
 }
-header nav {
+/* 块元素在水平方向上是撑不起父元素的 即div影响不了header的宽 */
+header div {
   width: 600px;
   margin: auto;
 }
 
+/* 主体的黑框 */
 main {
+/* 方法一 让main的padding 水平为零 垂直为10px*/
   padding: 0 10px;
-  max-width: 600px;
+  width: 600px;
   margin: auto;
   margin-top: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 2px solid;
+  border: 2px solid black;
+  /* box-sizing :border-box  使borderbox 可见宽不变，后面即使增减border的宽也不会有影响; */
   box-sizing: border-box;
 }
 
@@ -35,18 +40,26 @@ main div{
   background-color: violet;
 }
 main div:hover {
+  /* 给负margin，hover效果是往两边摆动 */
   margin-left: -10px;
   margin-right: -10px;
 }
 
 main p {
   height: 4em;
+  /* overflow 溢出  超出的部分滚动 */
   overflow: auto;
+  /* 这里注意 黑框里的留白是 main的margin和p的padding 的和，margin和padding是不会重叠的只能累加 有两种解决办法 */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* 方法二 margin-left: 10px; margin-right: 10px; */
 }
 
 section {
+  /*  margin 为auto 居中 */
   margin: auto;
   border: 50px solid red;
+  /* /* transparent 透明    上透明 右透明 下orange 左透明* 这样就做出例图的三角形/ */
   border-color: transparent transparent orange transparent;
   width: 0;
 }
@@ -56,10 +69,9 @@ section {
 </head>
 <body>
   <header>  
-        <nav>aaaaa</nav>  
-
+        <div>aaaa</div>  
   </header> 
-    
+]
   <main>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quae earum deserunt, voluptatum est soluta nostrum maiores! Illum, reiciendis perferendis. Veritatis quibusdam aliquid ducimus ad sunt expedita, deserunt consequatur. Asperiores.
@@ -70,6 +82,6 @@ section {
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde asperiores esse, vero officia sit, ducimus earum fugit quod suscipit eligendi, pariatur molestias facilis error sequi modi! Iste ipsam perferendis pariatur!
     </p>
     </main> 
-  <section></section>
-   </body>
+    <section></section>
+ </body>
 </html>
