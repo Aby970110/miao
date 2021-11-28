@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .table {
+      width: 100px;
+      /* border-collapse :collapse;属性设置表格的边框合并为一个单一的边框 */
+      border-collapse: collapse;
+    }
+
+    thead {
+      border-bottom: 1px solid #212529;
+    }
+
+    td,
+    th {
+      padding: 8px 8px;
+      text-align: left;
+    }
+
+    tr {
+      border-bottom: #dee2e6 1px solid;
+    }
+
+   &.table-striped {
+      
+        background-color: #f2f2f2;
+      }
+    }
+    &.table-hover {
+      background-color: red;
+    }
+table-borderd td，th {
+      
+        border: 1px solid #dee2E6;
+      }
+    
+     tbody tr:hover  {
+     
+        background-color:red;
+      }
+  
+    table-borderdless  thead, tr {
+     
+        border: none;
+      }
+    
+   &.table-sm {
+     th, td {
+     padding: 25em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table
+    class="table-responsive table xtable-striped table-hover xtable-sm xtable-bordered table-borderless xtable-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>
