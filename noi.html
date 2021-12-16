@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- 1.3编程基础之算术表达式与顺序执行(共20题) -->
+
     <script xtype="xxx" id="ch0103/01">
         var a = Number(prompt('a'))
         var b = Number(prompt('b')) 
@@ -110,8 +111,8 @@
     <script xtype="xxx" id="ch0103/13">
         var n = Number(prompt())
         var ge = n % 10
-        var shi = (n - ge) % 10
-        var bai = (n - ge - shi * 10) % 10
+        var shi = Math.trunc(n % 100 / 10)
+        var bai = Math.trunc(n / 100)
         var result = String(ge) + String(shi) + String(bai)
 
         console.log(result)
@@ -120,8 +121,9 @@
     <script xtype="xxx" id="ch0103/14">
         var h = prompt()
         var r = prompt()
-        var v = h * pi * r * r / 1000
-        var result = Math.ceil(20 / v) //* 向上取整  */
+        var v =  Math.ceil(20 * 1000 / (3.14159 * r * r * h))
+     
+        console.log(v)
     </script>
 
     <script xtype="xxx" id="ch0103/15">
