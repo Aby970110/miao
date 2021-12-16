@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- 1.3编程基础之算术表达式与顺序执行(共20题) -->
-    <script type="xxx" id="ch0103/01">
+    <script xtype="xxx" id="ch0103/01">
         var a = Number(prompt('a'))
-        var b = Number(prompt('b'))     console.log(a + b)
+        var b = Number(prompt('b')) 
+
+         console.log(a + b)
     </script>
 
     <script xtype="xxx" id="ch0103/02">
@@ -52,15 +54,18 @@
         result = (b / a * 100).toFixed(3)
         console.log(result + "%")
     </script>
+
     <script xtype="xxx" id="ch0103/07">
         var x = Number(prompt('x'))
         var a = Number(prompt('a'))
         var b = Number(prompt('b'))
         var c = Number(prompt('c'))
+
         var result = (a * x * x * x + b * x * x + c * x + d).toFixed(7)
 
         console.log(result)  
     </script>
+
     <script xtype="xxx" id="ch0103/08">
         var f = Number(prompt('f'))
         var c = 5 * (f - 32) / 9
@@ -73,7 +78,7 @@
         var pi = 3.14159
         var d = 2 * r
         var L = 2 * pi * r
-        var A = pi * r * r
+        var S = pi * r * r
 
         console.log(d.toFixed(4))
         console.log(L.toFixed(4))
@@ -90,8 +95,9 @@
     <script xtype="xxx" id="ch0103/11">
         var a = Number(prompt('a'))
         var b = Number(prompt('b'))
-        var r = a %
-            console.log(r.toFixed(4))
+        var r = a % b
+
+        console.log(r.toFixed(4))
     </script>
 
     <script xtype="xxx" id="ch0103/12">
@@ -107,6 +113,7 @@
         var shi = (n - ge) % 10
         var bai = (n - ge - shi * 10) % 10
         var result = String(ge) + String(shi) + String(bai)
+
         console.log(result)
     </script>
 
@@ -167,7 +174,7 @@
 
     </script>
     <script xtype="xxx" id="ch0103/20">
-        var n = Number('n')
+        var n = Number(prompt('n'))
         console.log(2 ** n)
     </script>
 
