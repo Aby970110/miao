@@ -930,6 +930,142 @@ console.log(sum )
 
             console.log(a)
         </script>
+        
+<script xtype="xxx" id="ch0105/18">
+    var n = Number(prompt())          
+    var total = Number(prompt())        //*   total   合计，总数//
+    var effective = Number(prompt())    //*  effective  有效的， 有影响的*//         
+    var ratio = effective / total      //*   ratio  有效率   
+  for(var i = 0; i < n; i++)  {
+    var t = Number(prompt())
+    var e = Number(prompt())
+
+    if (e / t - ratio > 0.05) {
+         console.log('better')
+     } else if (ratio - e / t > 0.05) {
+        console.log('worse')
+     } else {
+        console.log('same')
+     }
+    }
+</script>
+
+<script xtype="xxx" id="ch0105/19">
+    var n = Number(prompt())
+    var sum = 0 
+
+    for (var i = 0; i < n; i++) {
+        var x = Number(prompt())   //* 坐标
+        var y = Number(prompt())   //* 坐标
+        var p = Number(prompt())  //*人数
+        var d = Math.sqrt(x * x + y * y )   // *距离
+        var time = p * 1.5 + d / 50 * 2 
+        sum += time
+    } 
+
+    console.log(Math.ceil(sum))  //* 上取整
+</script>
+
+<script xtype="xxx" id="ch0105/20">
+    var n = Number(prompt())
+
+    var h = 20
+    var sum = h 
+
+    for (var i = 0; i < 10; i++) {   //* i 表示第几次落地的次数
+        h = h / 2  //*  第i次落地之前的高度
+        sum += h *2   //* 落地以后的距离累加
+    }
+    console.log(sum, h / 2 )   //* 此时log出的h 是第十次的谈弹跳高度和，求对应题目所以/2
+</script>
+
+<script xtype="xxx" id="ch0105/21">  //* 注意逻辑顺序 容易造成死循环
+    var n = Number(prompt())
+
+    while(true) {
+        if (n == 1) {
+            console.log('End')  //* n=1 的特殊性 所以要写在前面   
+            break   //*  因为等于1 要结束 所有要跳出循环
+        } else if (n % 2 == 1) {
+            var t = n * 3 + 1
+            console.log(n + '*3+1' + t ) //* 题中的 *3+1 为字符串
+            n = t 
+        } else if (n % 2 == 0) {
+            var t = n / 2
+            console.log(n + '/2=' + t)  //* /2=  同样作为字符串
+            n = t 
+        } 
+    }
+</script>
+  
+<script xtype="xxx" id="ch0105/22">    //* 考虑逻辑顺序 先考虑钱<300 的情况。多余300载进入下一个条件
+    var money = 0 //* 手上的钱 
+    var stock = 0 // 存的钱
+    var flag = false
+    for (var i = 1; i <= 12; i++) {   //* 实际存在的不能为0 i声明为1 范围就是<= 12
+        money += 300
+        var budget = Number(prompt()) //* budget预算// 
+        if (money < budget) {
+            console.log(-i)
+            flag = true
+            break
+        }
+        money = money - budget 
+
+        if (mone >= 100) {
+            var left = money % 100 //*  保留零钱(剩下的钱)
+            stock += money - left //* 储存整百（+= 的是 手上的签 money - 剩下的钱 left的 值）
+            money = left 
+        }
+    }
+    if (!flag) {
+        console.log(stock * 1.2 + money)
+    }
+</script>
+
+<script xtype="xxx" id="ch0105/23">
+    var stock = Number(prompt())   //  库存
+    var n = Number(prompt())
+    var c = 0     // 没有取上药的人数量
+    for (var i = 0; i < n; i++) {
+        var need = Number(prompt())  // 需要药的
+        if (need <= stock ) {
+            stock -= need 
+        } else {
+            c++
+        }
+    }
+
+
+</script>
+
+<script xtype="xxx" id="ch0105/24">
+    
+
+    var n = Number(prompt())
+    var max = 0 //* 之前记录过的最大小时数
+    var  c = 0 //*  连续的正常小时数
+    for (var i = 0; i < n; i++) {
+    var a =     Number(prompt())
+    var b =     Number(prompt())
+    var isNormal = a >= 90 && a <= 140 && b >= 60 && b <= 90 
+
+        if (isNormal) {
+            c++
+            if (c > max) {
+                max = c
+            }
+        } else {
+            c = 0
+        }
+    }
+
+    console.log(max)
+</script>
+
+
+
+
 
 
 
