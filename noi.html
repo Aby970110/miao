@@ -911,7 +911,7 @@ console.log(sum )
     <script xtype="xxx" id="ch0105/16">
         var N = Number(prompt())
         var M = Number(prompt())
-
+        var k = 0
         var sum = 0
         var housePrice = 200
         var buyed = false
@@ -949,11 +949,14 @@ console.log(sum )
     </script>
 
     <script xtype="xxx" id="ch0105/18">
+
         var n = Number(prompt())
         var total = Number(prompt())        //*   total   合计，总数//
-        var effective = Number(prompt())    //*  effective  有效的， 有影响的*//         
-        var ratio = effective / total      //*   ratio  有效率   
-        for (var i = 0; i < n; i++) {
+        var effective = Number(prompt())    //*  effective  有效的， 有影响的*//
+
+        var ratio = effective / total      //*   ratio  有效率  
+
+        for (var i = 1; i < n - 1; i++) {
             var t = Number(prompt())
             var e = Number(prompt())
 
@@ -1007,11 +1010,10 @@ console.log(sum )
                 n = t
             } else if (n % 2 == 0) {
                 var t = n / 2
-                console.log(n + '/2=' + t)  //* /2=  同样作为字符串
+                console.log(n + '/2=' + t)  //* ‘/2=’  同样作为字符串
                 n = t
             }
         }
-        console.log('End')
     </script>
 
     <script xtype="xxx" id="ch0105/22">    //* 考虑逻辑顺序 先考虑钱<300 的情况。多余300载进入下一个条件
