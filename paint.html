@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas width="500" height="400"></canvas>
+</body>
+<script>
+
+
+
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.round(x)
+    y = Math.round(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+
+  /**
+   * YOUR TASK
+      * 
+
+      
+     
+      
+      
+    
+    
+      
+      * 画一个实心矩形
+      * 画两个个空心的圆，居中：
+        * 一个半径为50像素
+        * 一个半径为200像素
+      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小合适】的sin(x)的图像
+
+      //放大时的插帧方式：不插帧，直接放大像素
+
+      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+        如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27     倾斜
+           0  1
+           ------
+           0.5    0.87   旋转
+           -0.87  0.5
+
+   */
+</script>
+<script>
+  //*在 坐标 (42, 42) 画出一个点 
+  dot(42, 42, 'red')
+
+  //* 画一条实线
+  for (var x = 50; x < 300; x++) {
+    dot(x, 50, '	Crimson')
+  }
+
+  //* 画一条一个实点一个空点的虚线
+  for (var x = 50; x < 300; x += 2) {  //*  每次跳2
+    dot(x, 60, '	Violet')
+  }
+
+  //* 画一条两个实点两个空点的虚线
+  for (var x = 50; x < 300; x += 4) {
+    dot(x, 70, 'yellow')
+    dot(x + 1, 70, '	SkyBlue')
+  }
+  //*画一条三个实点两个空点的虚线
+  for (var x = 50; x < 300; x++) {
+    if (x % 5 < 3) {
+      dot(x, 80, 'MintCream')
+    }
+  }
+
+  //* 画一条45度的斜线
+  for (var x = 20, y = 40; x < 100; x++, y++) {
+    dot(x, y, 'Cyan')
+  }
+
+  //*条30度的斜线（与x轴或y轴的夹角呈30度）
+  for (var x = 50; x < 300; x++) {      //* 以x为主变化
+    var y = x / Math.sqrt(3)  //*  30度   乘 根号三 会出现断点的现象（开方的值随x变大而变大，且是取整。后一个点的y会一直比前一个的大或者小 所以有断点 用 x 除以 根号3 就可以避免
+    dot(x, y, 'aqua')
+  }
+
+  //* 画一条跨越画布左上角和右下角的对角线
+  for (var x = 0; x < 500; x++) {
+    var y = x * 0.8
+    dot(x, y, "gold")
+  }
+
+
+  //** 画一个实心矩形
+//   for (var y = 80; y < 200; y++ ) {
+//     for (var x = 50; x < 100; x++)
+//    dot (x,y, 'indigo')
+//  }
+
+
+ for (var y = 0; y < 100; y++ ) {
+    for (var x = 0; x < 100; x++) {
+    var color  = 'rgb(' + x / 100 * 256 +',' + y / 100 * 256 +',255)'
+   dot (x+50,y+150, color)       //*  在声明中可以先设置xy为0 在dot中对应+上想要的坐标即可
+
+
+   var x1 = 0.5 * x - 0.87 * y   //* 旋转
+   var y1 = 0.87 * x + 0.5 * y
+   dot (x1+150,y1+250, color)
+
+   var x2 = x                        //* 倾斜
+   var y2 = y + 0.27 * x 
+   dot (x, y, color)
+ }
+}
+
+  //* 画一个空心矩形
+  for (var y = 50; y <= 100; y++) {
+    for (var x = 50; x <= 150; x++) {
+      if (x == 50 || x == 150 || y ==50|| y == 100) {
+        dot (x,y,'PaleGreen')
+      }
+  
+    }
+  }
+ 
+  //* 画两个个空心的圆，居中：
+
+
+
+  //* * 一个半径为200像素
+
+  //* 画一个实心的圆，半径至少为100像素
+
+  //* 画一个【大小合适】的sin(x)的图像
+
+
+  //* 画出rgb色彩空间的某一面（尺寸要大于100x100）
+
+</script>
+
+</html>
