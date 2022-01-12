@@ -121,7 +121,6 @@
     var color  = 'rgb(' + x / 100 * 256 +',' + y / 100 * 256 +',255)'
    dot (x+50,y+150, color)       //*  在声明中可以先设置xy为0 在dot中对应+上想要的坐标即可
 
-
    var x1 = 0.5 * x - 0.87 * y   //* 旋转
    var y1 = 0.87 * x + 0.5 * y
    dot (x1+150,y1+250, color)
@@ -142,7 +141,7 @@
     }
   }
  
-  //* 画两个个空心的圆，居中：
+  //* 画两个个空心的圆，居中：      //**    专业术语computer graphics aliasing
 
 
 
@@ -151,7 +150,16 @@
   //* 画一个实心的圆，半径至少为100像素
 
   //* 画一个【大小合适】的sin(x)的图像
-
+  function line(x1, y1, x2, y2) {
+    var x = x1
+    var y = y1
+    var ystep = Math.abs((y2 - y1) / (x2 - x1))
+    while (x <= x1) {
+      dot(x, y, color)
+      x++
+      y += ystep
+    }
+  }
 
   //* 画出rgb色彩空间的某一面（尺寸要大于100x100）
 
